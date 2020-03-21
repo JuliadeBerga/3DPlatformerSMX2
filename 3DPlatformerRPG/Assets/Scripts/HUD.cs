@@ -10,6 +10,7 @@ public class HUD : MonoBehaviour {
     //Crea una variable per poder connectar amb l'script de Inventory
     public Inventory Inventory;
 
+    //Crea una variable anomenada MessagePanel perquè aparegui el missatge de Press F to Pick the item
     public GameObject MessagePanel;
 
     // Use this for initialization
@@ -112,14 +113,19 @@ public class HUD : MonoBehaviour {
         get { return mIsMessagePanelOpened; }
     }
 
+    //Funció per fer apareixer el MessagePanel, i agafar el Missatge: Press key F to Pickup de cadascun dels items
     public void OpenMessagePanel(InteractableItemBase item)
     {
+        //Activa el panell MessagePanel que és un child de HUD(on està aquest script assignat)
         MessagePanel.SetActive(true);
 
+        //Inicialitza la variable Text del Message Panel (és un child de Message Panel)
         Text mpText = MessagePanel.transform.Find("Text").GetComponent<Text>();
+
+        //Posa el text que hi hagi a cadascun dels items
         mpText.text = item.InteractText;
         
-
+        //Posem la variable del MessagePanel a activat
         mIsMessagePanelOpened = true;
 
 

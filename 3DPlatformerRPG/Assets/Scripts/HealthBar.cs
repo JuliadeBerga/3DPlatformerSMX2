@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+//Script necessari per controlar la Barra de Vida
+//Script assignat al objecte HealthBar. HUD->Bars_Panel->HealthBar
 public class HealthBar : MonoBehaviour {
 
     public Image ImgHealthBar;

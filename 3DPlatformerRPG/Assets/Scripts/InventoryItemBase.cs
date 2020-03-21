@@ -78,13 +78,20 @@ public class InventoryItemBase : InteractableItemBase
         
     }
 
+    //Primer hem de copiar el objecte i pegar-lo com a child de hand.r
+    //Resetejem els seus valors i el posicionem com vulguem
+    //Utilitzarem aquests valors per posar-los en els següents dos Vectors3
+
     //Aqui haurem de posar els valors de posició quan l'objecte està a la mà del player
     public Vector3 PickPosition;
 
     //Aqui haurem de posar els valors de rotació quan l'objecte està a la mà del player
     public Vector3 PickRotation;
 
+
+
     //Aqui haurem de posar els valors de rotació (si volem) quan l'objecte es deixi caure a l'escena
+    //Aquests valors haurien de ser els mateixos que tenen l'objecte abans d'agafar-lo, pq quedi igual quan el deixem
     public Vector3 DropRotation;
 
     //Aqui haurem de posar els valors de true o false si el nostre objecte es podrà utilitzar
